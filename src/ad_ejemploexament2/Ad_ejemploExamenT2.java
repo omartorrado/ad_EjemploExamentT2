@@ -16,13 +16,15 @@ public class Ad_ejemploExamenT2 {
      */
     public static void main(String[] args) {
         DBHandler dbh=new DBHandler();
-        //comandos de neodatis
+        //conecto con las bases
         dbh.conectarNeodatis();
-        
-        dbh.desconectarNeodatis();
-        //comandos de mongo
         dbh.conectarMongo();
         
+        //realizo acciones
+        dbh.mostrarAnalisisNeodatis();
+        
+        //Cierro las conexiones
+        dbh.desconectarNeodatis();
         dbh.desconectarMongo();
     }
     
